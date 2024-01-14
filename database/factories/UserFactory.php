@@ -18,10 +18,21 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
+            'name_school' => fake()->name,
+            'address' => fake()->address,
+            'postal_code' => fake()->randomNumber,
+            'phone_school' => fake()->e164PhoneNumber,
+            'type' => fake()->randomElement(['PRIVADA', 'PUBLICA']),
+            'director1' => fake()->name,
+            'director2' => fake()->name,
+            'email' => fake()->unique()->safeEmail,
+            'first_time_school' => fake()->randomElement(['SI', 'NO']),
+            'sede' => fake()->randomElement(['SI', 'NO']),
+            'userType' => 'Colegio',
+            'province_id' => fake()->randomElement([2, 6, 10, 14, 22, 26, 18, 30, 34, 38, 42, 46, 50, 54, 58, 62, 66, 70, 74, 78, 82, 86, 90, 94]),
+            'region_id' => 6,
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => bcrypt('123'),
             'remember_token' => Str::random(10),
         ];
     }
