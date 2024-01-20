@@ -24,11 +24,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <!--Theme Styles-->
-      <link href="{{ asset('assets/css/dark-theme.css') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/css/semi-dark.css') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/css/header-colors.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/dark-theme.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/semi-dark.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/header-colors.css') }}" rel="stylesheet" />
 
-    <title>Fobia - Bootstrap5 Admin Template</title>
+    <title>OACj {{ date('Y') }}</title>
 </head>
 
 <body>
@@ -99,4 +99,5 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
 </body>
+
 </html>

@@ -1,10 +1,7 @@
 <aside class="sidebar-wrapper" data-simplebar="true">
     <div class="sidebar-header">
         <div>
-            <img src="{{ asset('assets/images/logo-icon-2.png') }}" class="logo-icon" alt="logo icon">
-        </div>
-        <div>
-            <h4 class="logo-text">Fobia</h4>
+            <img src="{{ asset('assets/images/oacj.png') }}" class="logo-icon" alt="logo icon" style="width: 50%;">
         </div>
     </div>
     <!--navigation-->

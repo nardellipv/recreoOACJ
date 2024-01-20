@@ -2,11 +2,11 @@
 
 namespace App\Http\Middleware;
 
-use App\Models\User;
+use App\Models\Teacher;
 use Closure;
 use Illuminate\Http\Request;
 
-class CompleteProfileSchoolMiddleware
+class RegisterTeacherMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,14 +17,16 @@ class CompleteProfileSchoolMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        $school = User::where('id', userConnect()->id)
-            ->first();
+        {
+            $teacher = Teacher::where('user_id', userConnect()->id)
+                ->first();
 
-        if ($school->address != NULL) {
-            return $next($request);
-        } else {
-            alert()->error('Oops...', 'Por favor completar todos los datos del colegio!');
-            return redirect('/colegio');
+            if ($teacher != NULL) {
+                return $next($request);
+            } else {
+                alert()->error('Oops...', 'Por favor agregar profesor antes de continuar!');
+                return redirect('/profesor-agregar');
+            }
         }
     }
 }
